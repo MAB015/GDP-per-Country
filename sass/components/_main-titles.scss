@@ -1,0 +1,4 @@
+.gdp-country--main-title {
+    @include titulos($color-claro, 3.5rem, $fuente-principal);
+    @include transform();
+}

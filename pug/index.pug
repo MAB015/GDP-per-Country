@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title GDP Countries
+        link(rel="stylesheet", href="../css/index.css")
+    body 
+        h1.gdp-country--main-title GDP Country
+        .gdp-country--search
+            input#gdp-country--search__input.gdp-country--search__input(type="text", name="", placeholder="Ex. United States")
+            button.gdp-country--search__button(onclick="verGDP()") Please show me the GDP
+        .gdp-country--content 
+            .gdp-country--content__waiting Waiting for the information...
+            .gdp-country--content__result
+                .gdp-country--content__result__flag
+                .gdp-country--content__result__name
+                    h2#country-result__name 
+                .gdp-country--content__result__gdp#gdp-country--content__result__gdp
+                    h3 GDP 
+                    p#usd-result--gdp  USD&nbsp
+                .gdp-country--content__result__gdp-per-capita#gdp-country--content__result__gdp-per-capita
+                    h3 GDP per Capita
+                    p#usd-result--gdp-per-capita  USD&nbsp
+                //- .gdp-country--content__result__name
+                //-     h2#country-result Sudafrica
+                //- .gdp-country--content__result__gdp#gdp-country--content__result__gdp
+                //-     h3 GDP 
+                //-     p USD&nbsp
+                //-         span#usd-result--gdp $2555555
+                //- .gdp-country--content__result__gdp-per-capita#gdp-country--content__result__gdp-per-capita
+                //-     h3 GDP per Capita
+                //-     p USD&nbsp
+                //-         span#usd-result--gdp-per-capita $499999
+    footer 
+        script(src="../dist/index.js") 

@@ -1,0 +1,205 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(21, 0, 36);
+  background: linear-gradient(174deg, rgb(21, 0, 36) 0%, rgb(49, 4, 80) 35%, rgb(70, 8, 107) 100%);
+}
+
+.gdp-country--main-title {
+  color: white;
+  font-size: 3.5rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  transform: skewY(-2deg);
+}
+
+.gdp-country--search {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 600px;
+}
+.gdp-country--search__input {
+  border: none;
+  font-weight: bolder;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 10px;
+  text-align: center;
+  border-radius: 1rem 1rem 0 0;
+  color: linear-gradient(174deg, rgb(21, 0, 36) 0%, rgb(49, 4, 80) 35%, rgb(70, 8, 107) 100%);
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transform: skewY(-2deg);
+}
+.gdp-country--search__input::-moz-placeholder {
+  opacity: 20%;
+  color: rgb(21, 0, 36);
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.gdp-country--search__input::placeholder {
+  opacity: 20%;
+  color: rgb(21, 0, 36);
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.gdp-country--search__button {
+  background: linear-gradient(174deg, rgb(21, 0, 36) 0%, rgb(49, 4, 80) 35%, rgb(70, 8, 107) 100%);
+  box-shadow: inset 0 10px 13px -3px #000000;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 10px;
+  text-align: center;
+  border-radius: 0 0 1rem 1rem;
+  color: white;
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transform: skewY(-2deg);
+  transform: skewY(-2deg);
+}
+
+.gdp-country--content {
+  display: flex;
+  margin-top: -20px;
+  align-items: center;
+  padding: 50px;
+  width: 400px;
+  height: 150px;
+  border-radius: 1rem;
+  background-color: rgba(254, 186, 74, 0.09);
+  box-shadow: inset 5px 5px 10px 5px rgb(21, 0, 36);
+}
+.gdp-country--content__waiting {
+  display: flex;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bolder;
+  opacity: 0.5;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  border-right: 0.15em solid #FEBA4A;
+  animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
+  color: white;
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.gdp-country--content__result {
+  display: grid;
+  color: white;
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 15px;
+}
+.gdp-country--content__result__flag {
+  grid-column: 1;
+  grid-row: 1/4;
+  display: grid;
+  align-content: center;
+}
+.gdp-country--content__result__name {
+  grid-column: 2;
+  grid-row: 1;
+}
+.gdp-country--content__result__name h2 {
+  margin-bottom: -5px;
+  color: #FEBA4A;
+  font-size: 2rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.gdp-country--content__result__name h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.gdp-country--content__result__name p {
+  color: white;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.gdp-country--content__result__name span {
+  font-weight: bold;
+  color: #FEBA4A;
+}
+.gdp-country--content__result__gdp {
+  grid-column: 2;
+  grid-row: 2;
+}
+.gdp-country--content__result__gdp h2 {
+  margin-bottom: -5px;
+  color: #FEBA4A;
+  font-size: 2rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.gdp-country--content__result__gdp h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.gdp-country--content__result__gdp p {
+  color: white;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.gdp-country--content__result__gdp span {
+  font-weight: bold;
+  color: #FEBA4A;
+}
+.gdp-country--content__result__gdp-per-capita {
+  grid-column: 2;
+  grid-row: 3;
+}
+.gdp-country--content__result__gdp-per-capita h2 {
+  margin-bottom: -5px;
+  color: #FEBA4A;
+  font-size: 2rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.gdp-country--content__result__gdp-per-capita h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.gdp-country--content__result__gdp-per-capita p {
+  color: white;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.gdp-country--content__result__gdp-per-capita span {
+  font-weight: bold;
+  color: #FEBA4A;
+}
+
+.dissapear {
+  display: none;
+}/*# sourceMappingURL=index.css.map */

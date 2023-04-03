@@ -1,0 +1,19 @@
+{
+  "name": "gpd-countries",
+  "version": "1.0.0",
+  "description": "Gpd of the countries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gpd",
+    "value",
+    "countries"
+  ],
+  "author": "mab015",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.0.2"
+  }
+}
